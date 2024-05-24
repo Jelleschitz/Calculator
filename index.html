@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script>
+			function add2Numbers() {
+				var numA = document.getElementById('num1').value * 1.0;
+				var numB = document.getElementById('num2').value * 1.0;
+				document.getElementById("result").innerHTML = numA + numB;
+			}
+
+			function subtract2Numbers() {
+				var numA = document.getElementById('num1').value * 1.0;
+				var numB = document.getElementById('num2').value * 1.0;
+				document.getElementById("result").innerHTML = numA - numB;
+			}
+
+			function multiply2Numbers() {
+				var numA = document.getElementById('num1').value * 1.0;
+				var numB = document.getElementById('num2').value * 1.0;
+				document.getElementById("result").innerHTML = numA * numB;
+			}
+
+			function divide2Numbers() {
+				var numA = document.getElementById('num1').value * 1.0;
+				var numB = document.getElementById('num2').value * 1.0;
+				if (numB !== 0) {
+					document.getElementById("result").innerHTML = numA / numB;
+				} else {
+					document.getElementById("result").innerHTML = "Error: Division by zero";
+				}
+			}
+
+			function power2Numbers() {
+				var numA = document.getElementById('num1').value * 1.0;
+				var numB = document.getElementById('num2').value * 1.0;
+				document.getElementById("result").innerHTML = Math.pow(numA, numB);
+			}
+
+			function root2Numbers() {
+				var numA = document.getElementById('num1').value * 1.0;
+				var numB = document.getElementById('num2').value * 1.0;
+				if (numB !== 0) {
+					document.getElementById("result").innerHTML = Math.pow(numA, 1 / numB);
+				} else {
+					document.getElementById("result").innerHTML = "Error: Root by zero";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="myheading">This is the best calculator in the world</h1>
+		<form>
+			<label for="num1">First Number:</label>
+			<input type="number" id="num1" name="num1"><br><br>
+			<label for="num2">Second Number:</label>
+			<input type="number" id="num2" name="num2"><br><br>
+		</form>
+		<p></p>
+		</button>
+		<button onclick="add2Numbers()">
+			Add
+		</button>
+		<button onclick="subtract2Numbers()">
+			Subtract
+		</button>
+		<button onclick="multiply2Numbers()">
+			Multiply
+		</button>
+		<button onclick="divide2Numbers()">
+			Divide
+		</button>
+		<button onclick="power2Numbers()">
+			Power
+		</button>
+		<button onclick="root2Numbers()">
+			Root
+		</button>
+		<p id="result"></p>
+	</body>
+</html>
